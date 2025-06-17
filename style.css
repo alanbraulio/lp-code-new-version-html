@@ -44,7 +44,7 @@ body {
 }
 
 .section-title1 {
-  font-size: 22px;
+  font-size: 32px;
   text-align: center;
   color: #fff !important;
 }
@@ -660,11 +660,28 @@ body {
 
 .play-button {
   position: absolute;
-  width: 68px;
-  height: 48px;
-  background: url("https://w7.pngwing.com/pngs/566/248/png-transparent-computer-icons-youtube-play-button-button-angle-text-triangle.png")
-    no-repeat center center;
-  background-size: contain;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/727/727245.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40%;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.play-button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: translate(-50%, -50%) scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .dashboard-container {
@@ -692,7 +709,7 @@ body {
 
 .counter-card-count {
   color: #00bcd3;
-  font-size: 24px;
+  font-size: 32px;
   font-weight: bold;
 }
 
@@ -852,7 +869,6 @@ body {
   }
 }
 
-
 .offer {
   padding: 50px 20px;
   background-color: #000;
@@ -876,6 +892,7 @@ body {
   text-align: center;
   font-size: 24px;
   color: #fff;
+  margin-bottom: 30px;
 }
 
 .container1 {
@@ -919,13 +936,14 @@ body {
   font-weight: bold;
   color: #00bcd3;
   text-align: center;
-  margin-top: 10px;
+  margin: 10px 0px;
 }
 
 .line-offer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 .line-offer p,
@@ -942,6 +960,7 @@ body {
   font-size: 24px;
   font-weight: 700;
   color: #fff;
+  margin-bottom: 64px;
 }
 
 .guarantee_access {
@@ -954,16 +973,22 @@ body {
   color: #00bcd3;
   margin-bottom: 50px;
   font-size: 56px;
+  margin-bottom: 30px;
 }
 
 .card-offer__price__all {
   letter-spacing: 7.4px;
   color: #d8d8d8;
   font-size: 16px;
+  margin-bottom: 30px;
 }
 
 .offer_button {
-  background: linear-gradient(0deg, rgb(213, 244, 238) 0%, rgb(0, 255, 208) 100%);
+  background: linear-gradient(
+    0deg,
+    rgb(213, 244, 238) 0%,
+    rgb(0, 255, 208) 100%
+  );
   padding: 20px;
   border-radius: 10px;
   color: #000;
@@ -972,6 +997,7 @@ body {
   cursor: pointer;
   border: none;
   margin: 20px 0;
+  font-size: 24px;
 }
 
 @keyframes LUZ {
@@ -1226,6 +1252,8 @@ body {
   flex-direction: column;
   gap: 32px;
   padding: 64px;
+  font-size: 28px;
+  text-align: left;
 }
 
 .question-container .question {
@@ -1241,7 +1269,7 @@ body {
   display: block;
   color: #ccc;
   margin-top: 10px;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 @media screen and (max-width: 768px) {
@@ -1353,43 +1381,42 @@ body {
   }
 }
 
-.footer{
-    text-align: center;
-    padding: 2rem 0;
-    text-align: center;
-    color: #9ca3af;
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  text-align: center;
+  color: #9ca3af;
 }
-.footer__content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }
 
-.footer__content img{
-    
-    width: 20%;
+.footer__content img {
+  width: 20%;
 }
-.copyright{
-    display: flex;
-    gap: 20px;
+.copyright {
+  display: flex;
+  gap: 20px;
 }
 
 @media screen and (max-width: 768px) {
-    .copyright{
-        flex-direction: column;
-    }
+  .copyright {
+    flex-direction: column;
+  }
 }
 
 .whatsapp-icon {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    cursor: pointer;
-    z-index: 9999;
-  }
-  
-  .whatsapp-image {
-    width: 50px;
-  }
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.whatsapp-image {
+  width: 50px;
+}
